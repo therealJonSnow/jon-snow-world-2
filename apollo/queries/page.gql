@@ -1,0 +1,17 @@
+query Page {
+  page {
+    GalleryList {
+      GalleryItem {
+        Title,
+        Image {
+          url
+        }
+      }
+    },
+    Profile {
+      Photo {
+        url
+      }
+    }
+  }
+}

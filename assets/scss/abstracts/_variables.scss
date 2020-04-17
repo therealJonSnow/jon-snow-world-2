@@ -1,0 +1,43 @@
+// VARIABLES
+
+// colours
+
+$black: #2c3e50;
+$blue: #C3FFFA;
+$yellow: #FFCE80;
+$grey: #707070;
+
+$base: $black;
+$primary: $blue;
+$secondary: $yellow;
+$outline: $grey;
+
+// fonts
+$fontPoiret: 'Poiret One', Helvetica, Arial, sans-serif;
+$fontOxygen: 'Raleway', Helvetica, Arial, sans-serif;
+
+$fontPrimary: $fontPoiret;
+$fontSecondary: $fontOxygen;
+
+$baseFontSize: 16px;
+$tabletFontSize: 14px;
+$phoneFontSize: 12px;
+$smallPhoneFontSize: 10px;
+
+// breakpoints
+$desktop: "(max-width: 1450px)";
+$tablet: "(max-width: 1000px)";
+$phone: "(max-width: 700px)";
+$smallPhone: "(max-width: 475px)";
+
+// misc
+$browserContext: 16;
+$gutter: 5rem;
+$gutterSmall: 2rem;
+
+// z-index
+$z-index: (
+  // keep in hierarchical order in tens!
+  nav: 50,
+  button-triangle: 20
+)
