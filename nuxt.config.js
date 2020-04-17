@@ -91,13 +91,13 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: process.env.GRAPHQL_URL
+        httpEndpoint: process.env.GRAPHQL_URL || 'https://jonsnow-backend.herokuapp.com/graphql'
       }
     }
   },
 
   env: {
-    strapiBaseUri: process.env.API_URL
+    strapiBaseUri: process.env.API_URL || 'https://jonsnow-backend.herokuapp.com/'
   },
   /*
   ** Axios module configuration

@@ -2,7 +2,7 @@
 
 This is my personal site built with **Nuxt.js** and **Strapi CMS**
 
-##### Couple of packages of note:
+#### Couple of packages of note:
 
 * The falling heads use matter.js
 * Parallax is created with vue-parallax-js
