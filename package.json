@@ -18,6 +18,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/style-resources": "^1.0.0",
     "apollo-cache-inmemory": "^1.6.5",
+    "core-js": "^2.6.5", "nuxt": "2.6.3",
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
     "matter-js": "^0.14.2",
