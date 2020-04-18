@@ -12,6 +12,11 @@ query Page {
       Photo {
         url
       }
+    },
+    HeadIcon {
+      Image {
+        url
+      }
     }
   }
 }

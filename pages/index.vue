@@ -10,7 +10,8 @@
 
         <component
           :is="dropper"
-          ref="dropper" 
+          ref="dropper"
+          :image="page.HeadIcon.Image.url"
         >
         </component>
 
@@ -57,6 +58,7 @@ export default {
         },
         nudgeNav: function() {
             var navMenu = document.getElementById('navMenu');
+            console.log(navMenu);
             setTimeout( function() {
                     navMenu.classList.add("active")
                     navButton.classList.add('fa-minus');
@@ -69,6 +71,7 @@ export default {
         this.$nextTick(function () {
            this.dropper = 'Dropper'
         })
+        this.nudgeNav()
     },
 }
 

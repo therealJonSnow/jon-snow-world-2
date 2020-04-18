@@ -40,11 +40,12 @@ import {
 export default {
     name: 'Dropper',
 
+    props: {
+        image: String
+    },
 
     data: function () {
         return {
-            images: '',
-            success: false,
         }
     },
 
@@ -56,6 +57,8 @@ export default {
         var height = window.innerHeight;
         var halfWidth = width / 2;
         var halfHeight = height / 2;
+
+        var head = this.image;
 
         // create a renderer
         var render = Render.create({
@@ -125,7 +128,7 @@ export default {
                 strokeStyle: 'grey',
                 strokeWidth: '5px',
                 sprite: {
-                    texture: 'https://its-jonny.s3.amazonaws.com/zzz__Profile_Crop.png',
+                    texture: head,
                     xScale: 1,
                     yScale: 1
                 }
@@ -174,7 +177,7 @@ export default {
                 var faceNew = Bodies.fromVertices(x, y, path, {
                     render: {
                         sprite: {
-                            texture: 'https://its-jonny.s3.amazonaws.com/zzz__Profile_Crop.png',
+                            texture: head,
                             xScale: 1,
                             yScale: 1
                         }
@@ -192,7 +195,7 @@ export default {
             var faceClick = Bodies.fromVertices(x, y, path, {
                 render: {
                     sprite: {
-                        texture: 'https://its-jonny.s3.amazonaws.com/zzz__Profile_Crop.png',
+                        texture: head,
                         xScale: 1,
                         yScale: 1
                     }

@@ -10,7 +10,6 @@
         </div>
     </div>
 
-
 </template>
 
 <style lang="scss">
@@ -130,7 +129,6 @@ export default {
     name: 'navMenu',
 
     props: {
-
     },
 
     data: function () {
@@ -141,8 +139,6 @@ export default {
     },
 
     computed: {
-
-
     },
 
     methods: {

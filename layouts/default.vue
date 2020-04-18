@@ -7,21 +7,22 @@
 </template>
 
 <style lang="scss">
-.page-enter-active, .page-leave-active {
-    transition: opacity 0.5s;
-}
-.page-enter, .page-leave-active {
-  opacity: 0;
-}
 
-.main-container {
-    margin: 0px;
-    min-height: 100vh;
-    min-width: 100vw;
-    overflow-x: hidden;
-    position: relative;
-    text-align: center;
-}
+  .page-enter-active, .page-leave-active {
+      transition: opacity 0.5s;
+  }
+  .page-enter, .page-leave-active {
+    opacity: 0;
+  }
+
+  .main-container {
+      margin: 0px;
+      min-height: 100vh;
+      min-width: 100vw;
+      overflow-x: hidden;
+      position: relative;
+      text-align: center;
+  }
 </style>
 
 <script>
