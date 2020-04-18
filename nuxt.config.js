@@ -5,6 +5,8 @@ export default {
   generate: {
     fallback: true
   },
+
+  debug: true,
   /*
   ** Headers of the page
   */
