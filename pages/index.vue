@@ -55,23 +55,13 @@ export default {
         closeModal: function(event) {
             var modal = document.getElementById("photo-modal");
             modal.classList.remove("visible");
-        },
-        nudgeNav: function() {
-            var navMenu = document.getElementById('navMenu');
-            console.log(navMenu);
-            setTimeout( function() {
-                    navMenu.classList.add("active")
-                    navButton.classList.add('fa-minus');
-                    navButton.classList.remove('fa-plus');                    
-            }, 1500);                  
-        },
+        }
     },
 
     mounted() {
         this.$nextTick(function () {
            this.dropper = 'Dropper'
         })
-        this.nudgeNav()
     },
 }
 

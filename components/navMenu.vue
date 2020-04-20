@@ -160,6 +160,16 @@ export default {
                 }, 100);
             }
         }
+    },
+
+    mounted() {
+        var vm = this
+        if( vm.$route.name === "index" ) {
+            setTimeout( function() {
+                vm.toggleMenu()
+            }, 1500)
+        }
     }
+
 }
 </script>
