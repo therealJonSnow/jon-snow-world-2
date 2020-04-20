@@ -58,7 +58,7 @@
  -->            </ul> 
         </div>
 
-        <div v-parallax="0" class="container">                
+        <div class="container">                
                 <Rectangle class="" :top="'-3'" :left="'-3em'" :width="'80%'" :height="'100%'" :color="'var(--primary)'" :middle="true"></Rectangle>
                 <Subtitle :margin="true" :color="'var(--secondary)'">Things_Finalfinal_1/*</Subtitle>
 

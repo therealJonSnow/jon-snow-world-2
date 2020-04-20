@@ -1,68 +1,107 @@
 <template>
 	<div class="themes__container">
-        <div @click="showPrimary = !showPrimary" class="theme__icon">
+        <div @click="showPrimary | showSecondary ? '' : showPrimary = !showPrimary" class="theme__icon">
             <div class="icon__section" :style="{ 'background-color': colors[0] }"></div>
             <div class="icon__section" :style="{ 'background-color': colors[1] }"></div>
             <div class="icon__section" :style="{ 'background-color': colors[2] }"></div>
             <div class="icon__section" :style="{ 'background-color': colors[3] }"></div>
         </div>
-        <div class="themes">
-          <div @click="colorPrimary(); showPrimary = !showPrimary; showSecondary = !showSecondary;" class="theme__item" :class="{ active: showPrimary }" v-for="(color, index) in colors" :key="color" :style="{ 'background-color': color }"></div>  
-        </div>
-        <div class="themes">
-          <div @click="colorSecondary(); showSecondary = !showSecondary;" class="theme__item" :class="{ active: showSecondary }" v-for="(color, index) in colors" :key="color" :style="{ 'background-color': color }"></div>  
-        </div>
+
+        <transition-group
+            mode="out-in"
+            tag="div"
+            class="themes"
+            v-on:before-enter="beforeEnter"
+            v-on:enter="enter"
+            v-on:leave="leave"
+        >
+            <div
+                v-if="showPrimary"
+                @click="colorPrimary(); showPrimary = !showPrimary; showSecondary = !showSecondary;"
+                class="theme__item"
+                v-for="(color, index) in colors"
+                :data-index="index"
+                :key="color"
+                :style="{ 'background-color': color }
+            "></div>  
+        </transition-group>
+
+        <transition-group  
+            mode="out-in" 
+            tag="div" 
+            class="themes"
+            v-on:before-enter="beforeEnter"
+            v-on:enter="enter"
+            v-on:leave="leave"
+        >
+            <div 
+                v-if="showSecondary"
+                @click="colorSecondary(); showSecondary = !showSecondary;"
+                class="theme__item" 
+                v-for="(color, index) in colors"
+                :data-index="index"
+                :key="color" 
+                :style="{ 'background-color': color }
+            "></div>
+        </transition-group> 
 	</div>
 
 </template>
 
 <style lang="scss" scoped>
-.themes__container {
-    position: absolute;
-    top: 2.25rem;
-    left: 2rem;
-    z-index: 20;
+    .theme-enter,
+    .theme-leave-to {
+        opacity: 0;
+        transform: translateX(-1rem);
+    }
+    .theme-enter-to,
+    .theme-leave {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .theme-enter-active,
+    .theme-leave-active {
+        transition: opacity, transform 500ms ease;
+    }
 
-    .themes {
+    .themes__container {
         display: flex;
-        flex-direction: column;
+        position: absolute;
+        top: 2.25rem;
+        left: 2rem;
+        z-index: 9;
 
-        .theme__item {
+        .themes {
+            display: flex;
+
+            .theme__item {
+                border-radius: 50%;
+                cursor: pointer;
+                height: 1.5rem;
+                margin: 0.5rem 0.5rem;
+                transition: margin 0.5s ease, opacity 0.5s ease;
+                width: 1.5rem;
+            }
+
+            div:first-of-type {
+                margin-left: 1.5rem;
+            }
+        }
+
+        .theme__icon {
             border-radius: 50%;
-            cursor: pointer;
-            height: 1rem;
-            margin: -0.5rem 0;
-            opacity: 0;
-            transition: margin 0.5s ease, opacity 0.5s ease;
-            width: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            height: 1.5rem;
+            margin: 0.5rem 0;
+            overflow: hidden;
+            width: 1.5rem;
 
-            &.active {
-                margin: 0.5rem 0;
-                opacity: 1;
-            }
-        }
-
-        div:last-of-type {
-            &.active {
-                margin-bottom: 1.5rem;
+            .icon__section {
+                width: 50%;
             }
         }
     }
-
-    .theme__icon {
-        border-radius: 50%;
-        display: flex;
-        flex-wrap: wrap;
-        height: 1rem;
-        margin: 0.5rem 0;
-        overflow: hidden;
-        width: 1rem;
-
-        .icon__section {
-            width: 50%;
-        }
-    }
-}
 </style>
 
 <script>
@@ -86,7 +125,32 @@
             colorSecondary: function() {
                 var targetColor = event.target.style.backgroundColor;
                 document.documentElement.style.setProperty('--secondary', targetColor);
-            }
+            },
+            beforeEnter: function(el) {
+                el.style.display = 'none'
+                el.style.opacity = 0
+            },
+
+            enter: function(el, index) {
+                setTimeout( function() {
+                    el.style.display = 'block'
+                    let delay = ( el.dataset.index + 1 ) * 10
+                    console.log(el)
+                    setTimeout(function() {
+                        el.style.opacity = 1
+                    }, delay)
+                }, 430)
+            },
+
+            leave: function(el, done) {
+                let delay = el.dataset.index * 10
+                setTimeout(function() {
+                    el.style.opacity = 0
+                    setTimeout(function() {
+                        el.style.display = 'none'
+                    }, 400)
+                }, delay)
+            },
         }
 
 }

@@ -17,22 +17,22 @@
     left: 60%;
     pointer-events: none;
     position: absolute;
-    top: 23rem;
+    top: 26rem;
     transform: translate3d(0px, -11.25px, 0px);
     width: 100px;
-    z-index: -20;
+    z-index: -10;
 
     @media (max-width: 700px) {
         left: 57%;            
-        top: 26rem;
+        top: 24rem;
     }
     @media (max-width: 475px) {
         left: 57%;            
-        top: 25rem;
+        top: 22rem;
     }
     @media (max-width: 400px) {
         left: 46%;            
-        top: 18rem;
+        top: 15rem;
     }
 
 }

@@ -23,6 +23,7 @@
         transition: width 0.5s ease;
         transition-delay: 0.2s;
         width: 3rem;
+        z-index: 10;
 
         &.active {
             width: 20rem;
