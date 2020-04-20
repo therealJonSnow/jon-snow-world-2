@@ -18,9 +18,9 @@
 
 <style lang="scss" scoped>
 .themes__container {
-    bottom: 2rem;
-    position: fixed;
-    right: 2.5rem;
+    position: absolute;
+    top: 2.25rem;
+    left: 2rem;
     z-index: 20;
 
     .themes {

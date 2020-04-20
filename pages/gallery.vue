@@ -1,7 +1,7 @@
 <template>
     <div class="page">
 
-        <PhotoModal :closeModal="modalVisible = false" :modalSrc="modalSrc" :modalVisible="modalVisible"></PhotoModal>
+        <PhotoModal @closeModal="modalVisible = false" :modalSrc="modalSrc" :modalVisible="modalVisible"></PhotoModal>
 
         <absolute v-parallax="0.3" :top="'200px'" :left="'70%'">
             <Circ :top="'0'" :left="'0'" :width="'1rem'" :center="'100px'" :color="'var(--primary)'"></Circ>
@@ -82,7 +82,7 @@ export default {
             modalSrc: '',
             modalVisible: false,
             page: [],
-            title: 'Gallery of art and animation'
+            title: 'Jonny Snow - Gallery'
         }
     },
 
@@ -109,9 +109,6 @@ export default {
             this.modalSrc = child;
             this.modalVisible = true;
         },
-    },
-
-    mounted() {
     }
 }
 </script>

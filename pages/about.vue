@@ -3,7 +3,7 @@
 
         <Profile v-parallax="0.1" :top="'0'" :left="'0'" :image="page.Profile.Photo.url" :width="'7rem'" :center="'150px'" :color="'var(--primary)'"></Profile>
         
-        <absolute v-parallax="0.4" :top="'906px'" :left="'120%'">
+        <absolute v-parallax="0.4" :top="'850px'" :left="'120%'">
             <Tri :scale="'(0.1)'" :top="'0'" :left="'0'" :width="'2rem'" :center="'2rem'" :color="'var(--secondary)'"></Tri>
         </absolute>
 
@@ -20,10 +20,10 @@
             <h4 class="contianer__header--indent">a <span class="span-highlight">brief guide </span>to</h4>              
             <Subtitle :color="'transparent'">Jonny_Snow</Subtitle>
             <p class="container__text">Hi there! I'm Jonny, a <span class="span-highlight">Front-end Web Developer</span> and creative based out of Winchester, Hampshire.
-                I am currently working with <span class="span-highlight">Studio Republic</span>, a creative agency for good, making the internet shake its jazz hands. <br/>
+                I am currently working as part of the amazing team at <a class="container__text--link" href="https://www.studiorepublic.com" ><span class="span-highlight">Studio Republic</span></a>, a creative agency for good, helping to make the internet shake its jazz hands.<br/>
             </p>
             <p class="container__text">
-                In my spare time I like making <span class="span-highlight">things.</span> Creating or developing my skills to bring ideas to life. Adding those extra touches that make peoples heads turn and take notice. 
+                In my spare time I like making <router-link to="/things" class="container__text--link"><span class="span-highlight">things.</span></router-link> Creating or developing my skills to bring ideas to life. Adding those extra touches that make peoples heads turn and take notice. 
             </p>
             <p/>
 
@@ -31,7 +31,7 @@
             <Subtitle :color="'transparent'">The_Essentials</Subtitle>
             <ul class="bullets bullets--mb">
                 <Bullet :yellow="true">
-                    Water. Preferably in large amounts. Doesn't matter if its frozen as long as I'm up a mountain.
+                    Water. Preferably in large amounts and salty. Doesn't matter if its frozen as long as I'm up a mountain.
                 </Bullet>
                 <Bullet :yellow="true">
                     Boardsports for sanity: windsurfing, skating, snowboarding, surfing, kitesurfing ...
@@ -73,22 +73,7 @@
                     MEng in Marine Engineering from Southampton University
                 </Bullet>
             </ul> 
-            <p class="container__text">
-            </p>
             <p/>
-<!--             <h4 class="contianer__header--indent">sites i've <span class="span-highlight">worked on </span></h4>
-            <Subtitle :color="'transparent'">work_work_work</Subtitle>
-            <ul class="bullets">
-                <Bullet :yellow="true">
-                    London Irish Foundation
-                </Bullet>
-                <Bullet :yellow="true">
-                    Vanilla Catering Venues
-                </Bullet>
-                <Bullet :yellow="true">
-                    South2South
-                </Bullet>
-            </ul>  -->
         </div>
 
         <div>  
@@ -139,7 +124,7 @@ export default {
         return {
             page: [],
             profile: '',
-            title: 'All about me'
+            title: 'Jonny Snow - About Me'
         }
     },
 

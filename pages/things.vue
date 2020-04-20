@@ -1,7 +1,7 @@
 <template>
     <div class="page">
 
-        <PhotoModal :closeModal="modalVisible = false" :modalSrc="modalSrc" :modalVisible="modalVisible"></PhotoModal>
+        <PhotoModal @closeModal="modalVisible = false" :modalSrc="modalSrc" :modalVisible="modalVisible"></PhotoModal>
 
         <absolute v-parallax="0.3" :top="'200px'" :left="'70%'">
             <Circ :top="'0'" :left="'0'" :width="'1rem'" :center="'100px'" :color="'var(--primary)'"></Circ>
@@ -16,9 +16,7 @@
        <div v-parallax="0" class="banner">
             <Banner :dot="false" :showS="true" :fullStop="false" :things="false">
                 <template slot="title">Here's_Some_<span class="span-highlight">Things</span></template>
-<!--                 <template slot="subtitle-top">What kind of</template>
-                <template slot="subtitle-btm">can I help you create?</template>
- -->            </Banner>
+            </Banner>
         </div>
 
         <div v-parallax="0.2" class="container">
@@ -36,10 +34,10 @@
                     370 miles, 11 days and over £1000 later I made it to Newquay, broken, and realising what an amazing invention the combustion engine is
                 </Bullet>
             </ul>
-            <router-link to="/things/skate-for-surf" class="nav-link button">
-                <button class="button--no-margin">coming soon</button>
-            </router-link>
-        </div>
+<!--             <router-link to="/things/skate-for-surf" class="nav-link button">
+ -->                <button class="button--no-margin">coming soon</button>
+<!--             </router-link>
+ -->        </div>
 
         <div v-parallax="0" class="container container--right">
             <Tri :scale="'(1)'" :top="'21em'" :left="'150px'" :width="'19rem'" :center="'25.1rem'" :color="'var(--primary)'"></Tri>
@@ -54,10 +52,10 @@
                 <Bullet :yellow="true">
                     I haven't been very good at recording our process so I'm going to start doing so here
                 </Bullet>
-                <router-link to="/gallery" class="nav-link button">
-                    <button class="button button--no-margin">coming soon</button>
-                </router-link> 
-            </ul> 
+<!--                 <router-link to="/gallery" class="nav-link button">
+ -->                    <button class="button button--no-margin">coming soon</button>
+<!--                 </router-link> 
+ -->            </ul> 
         </div>
 
         <div v-parallax="0" class="container">                
@@ -103,7 +101,7 @@ import Subtitle from '../components/subtitle.vue'
 import Tri from '../components/tri.vue'
 
 export default {
-    name: 'Services',
+    name: 'Things',
 
     components: {
         Absolute,
@@ -127,7 +125,7 @@ export default {
             modalSrc: '',
             modalVisible: false,
             page: [],
-            title: 'I like making things'
+            title: 'Jonny Snow - A few things'
         }
     },
 
@@ -149,15 +147,11 @@ export default {
             var target = event.target;
             var parent = target.closest('.container__row__item');
             var child = parent.firstElementChild.getAttribute('src');
-
             var modal = document.getElementById("photo-modal");
             this.modalSrc = child;
             this.modalVisible = true;
-        },
-    },
-
-    mounted() {
-    },
+        }
+    }
 }
 </script>
 
