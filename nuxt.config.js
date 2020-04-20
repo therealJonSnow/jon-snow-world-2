@@ -2,12 +2,6 @@ require('dotenv').config()
 
 export default {
   mode: 'universal',
-
-  generate: {
-    fallback: true
-  },
-
-  debug: true,
   /*
   ** Headers of the page
   */
@@ -32,7 +26,6 @@ export default {
   ** Customize the progress-bar color
   */
   loading: false,
-  // { color: '#FFCE80', height: '3px', throttle: 0 }
   /*
   ** Global CSS
   */

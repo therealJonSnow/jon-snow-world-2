@@ -67,7 +67,7 @@
     .themes__container {
         display: flex;
         position: absolute;
-        top: 2.25rem;
+        top: 2.35rem;
         left: 2rem;
         z-index: 9;
 
@@ -81,10 +81,18 @@
                 margin: 0.5rem 0.5rem;
                 transition: margin 0.5s ease, opacity 0.5s ease;
                 width: 1.5rem;
+
+                @media (max-width: 420px) {
+                    margin: 0.5rem 0.25rem;
+                }
             }
 
             div:first-of-type {
                 margin-left: 1.5rem;
+
+                @media (max-width: 420px) {
+                    margin-left: 0.5rem;
+                }
             }
         }
 
