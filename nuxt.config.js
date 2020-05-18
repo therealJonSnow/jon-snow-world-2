@@ -46,8 +46,13 @@ export default {
   */
   buildModules: [
     // Simple usage
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/google-analytics'
   ],
+
+  googleAnalytics: {
+    id: process.env.GA_ID || ''
+  },
   /*
   ** Nuxt.js modules
   */
