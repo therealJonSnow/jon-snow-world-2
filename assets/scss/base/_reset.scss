@@ -114,9 +114,10 @@ h6 {
   margin: 0 0 rem(12) 0;
 }
 
-p, ul {
+p, ul, li {
   line-height: 1.33;
   font-family: $fontSecondary;
+  font-weight: 400;
   margin: 1rem 0 rem(20) 0;
 
   // &:last-child {

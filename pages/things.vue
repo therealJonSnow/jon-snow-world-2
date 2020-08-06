@@ -14,48 +14,65 @@
         </absolute>
 
        <div v-parallax="0" class="banner">
-            <Banner :dot="false" :showS="true" :fullStop="false" :things="false">
-                <template slot="title">Here's_Some_<span class="span-highlight">Things</span></template>
+            <Banner :dot="false" :showS="true" :fullStop="true" :things="true">
+                <template slot="title">Here's_my_<span class="span-highlight">Portfolio</span></template>
+                <template slot="subtitle-top">of</template>
             </Banner>
         </div>
 
-        <div v-parallax="0.2" class="container">
-            <Circ :top="'-14'" :left="'-4'" :width="'4rem'" :center="'8rem'" :color="'var(--primary)'"></Circ>
-            <Circ :top="'-5.5'" :left="'-6'" :width="'22rem'" :center="'25rem'" :color="'var(--secondary)'"></Circ>
-            <Subtitle :color="'var(--primary)'">Skate_For_Surf</Subtitle>
-            <ul class="bullets">
-                <Bullet>
-                    When I was 16 I had the idea of skateboarding from Southend-on-sea (my hometown) to Newquay for a surf
-                </Bullet>
-                <Bullet>
-                    At 21 I finally did it; in aid of Surfers Against sewage
-                </Bullet>
-                <Bullet>
-                    370 miles, 11 days and over £1000 later I made it to Newquay, broken, and realising what an amazing invention the combustion engine is
-                </Bullet>
-            </ul>
-<!--             <router-link to="/things/skate-for-surf" class="nav-link button">
- -->                <button class="button--no-margin">coming soon</button>
-<!--             </router-link>
- -->        </div>
+        <div class="container container--mt">
+            <div class="case-study">
+                <h4 class="contianer__header--indent">minimalist <span class="span-highlight">sporting </span>site</h4>                  
+                <Subtitle :noMargin="true" :color="'var(--primary)'">Sam_Whaley_Sailing</Subtitle>
+                <div class="container--grid-two">
+                    <div style="background-color: blue"></div>
+                    <div>
+                        <p class="container__text">
+                            Freelance site built for Sam Whaley, a member of the British Sailing Team.
+                        </p>
+                        <p class="container__text">
+                            The site is built using Nuxt.js and Strapi, a headless CMS, allowing Sam full access to all content but keeping the speed offered by a server site rendered site.
+                        </p>
+                        <p class="container__text">
+                            The site is built using Nuxt.js and Strapi, a headless CMS, allowing Sam full access to all content but keeping the speed offered by a server site rendered site.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+            <div class="case-study case-study--end">
+                <h4 class="contianer__header--indent contianer__header--indent--right">minimalist <span class="span-highlight">sporting </span>site</h4>                  
+                <Subtitle :noMargin="true" :color="'var(--primary)'">Sam_Whaley_Sailing</Subtitle>
+                <div class="container--grid-two ">
+                    <div>
+                        <p class="container__text">
+                            Freelance site built for Sam Whaley, a member of the British Sailing Team.
+                        </p>
+                        <p class="container__text">
+                            The site is built using Nuxt.js and Strapi, a headless CMS, allowing Sam full access to all content but keeping the speed offered by a server site rendered site.
+                        </p>
+                        <p class="container__text">
+                            The site is built using Nuxt.js and Strapi, a headless CMS, allowing Sam full access to all content but keeping the speed offered by a server site rendered site.
+                        </p>
+                    </div>
+                    <div style="background-color: blue"></div>
+                </div>
+            </div>
+        </div>
 
         <div v-parallax="0" class="container container--right">
             <Tri :scale="'(1)'" :top="'21em'" :left="'150px'" :width="'19rem'" :center="'25.1rem'" :color="'var(--primary)'"></Tri>
-           <Subtitle :color="'var(--secondary)'">Creating_Crush</Subtitle>
+           <Subtitle :color="'var(--secondary)'">DrDoctor_Open_Mic</Subtitle>
             <ul class="bullets bullets--alt">
                 <Bullet :yellow="true">
-                    Feburary 2019, Beth and I bought our first van ( lifegoal &#9989 )
+                    DrDoctor are a london based company trying to transform NHS IT systems
                 </Bullet>
                 <Bullet :yellow="true">
-                    Since then we have been converting it into a camper, slowly but surely
+                    To help get across their new technology they launched their Open Mic series to provide 'Stories from inside DrDoctor. No fluff or sales pitches. Just quality information and insights.'
                 </Bullet>
                 <Bullet :yellow="true">
-                    I haven't been very good at recording our process so I'm going to start doing so here
+                    I was asked to create a succinct animation to preface their videos incorperating their logo which is now used across their social media platforms and website
                 </Bullet>
-<!--                 <router-link to="/gallery" class="nav-link button">
- -->                    <button class="button button--no-margin">coming soon</button>
-<!--                 </router-link> 
- -->            </ul> 
+            </ul> 
         </div>
 
         <div class="container">                

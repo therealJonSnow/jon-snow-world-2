@@ -44,5 +44,12 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^6.1.0",
     "eslint-plugin-nuxt": ">=0.4.2"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not IE > 0",
+    "last 5 versions",
+    "> 0.5%",
+    "last 3 iOS versions"
+  ]
 }

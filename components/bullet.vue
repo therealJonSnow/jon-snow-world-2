@@ -8,12 +8,16 @@
 <style lang="scss">
 .bullets {
     margin-bottom: 0;
-    max-width: 39rem;
+    max-width: 750px;
     padding-left: 18px;
 
     @media (max-width: 400px) {
         margin-bottom: 0;
         padding-left: 10px;
+    }
+
+    &--wide {
+        max-width: 100%;
     }
 }
 
@@ -30,8 +34,8 @@
 }
 
 .bullets__item {
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: 400;
     letter-spacing: 1.25px;
     line-height: 1.5;
     list-style: none;

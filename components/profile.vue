@@ -14,25 +14,25 @@
 
 .profile__container {
     height: 100px;
-    left: 60%;
+    left: 67%;
     pointer-events: none;
     position: absolute;
-    top: 26rem;
+    top: 20rem;
     transform: translate3d(0px, -11.25px, 0px);
     width: 100px;
     z-index: -10;
 
     @media (max-width: 700px) {
-        left: 57%;            
-        top: 24rem;
+        left: 63%;            
+        top: 18rem;
     }
     @media (max-width: 475px) {
         left: 57%;            
-        top: 22rem;
+        top: 16rem;
     }
     @media (max-width: 400px) {
-        left: 46%;            
-        top: 15rem;
+        left: 42%;            
+        top: 9rem;
     }
 
 }

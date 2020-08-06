@@ -51,7 +51,7 @@
     h3 {
         font-family: $fontSecondary;
         font-size: 2em;
-        font-weight: 300;
+        font-weight: 400;
         line-height: 1.2;
 
         &> span {

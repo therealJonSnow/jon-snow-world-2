@@ -49,9 +49,6 @@
             <p class="container__text">
                 I am a strong communicator who enjoys working with diverse clients through a pragmatic and flexible process to deliver beautiful optimised digital solutions.
             </p>
-             <p class="container__text">
-                As a marine engineer turned developer I'm not your usual suspect, but if you need a website built underwater I'm your guy.
-            </p>
             <p/>
             <ul class="bullets bullets--mb">
                 <Bullet :yellow="true">
@@ -74,6 +71,9 @@
                 </Bullet>
             </ul> 
             <p/>
+             <p class="container__text">
+                As a marine engineer turned developer I'm not your usual suspect, but if you need a website built underwater I'm your guy.
+            </p>
         </div>
 
         <div>  
