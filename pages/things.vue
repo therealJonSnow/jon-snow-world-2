@@ -22,7 +22,7 @@
 
         <div class="container container--mt">
             <div class="case-study">
-                <h4 class="contianer__header--indent">minimalist <span class="span-highlight">sporting </span>site</h4>                  
+                <h4 class="contianer__header--indent">making <span class="span-highlight">waves</span></h4>                  
                 <Subtitle :noMargin="true" :color="'var(--primary)'">Sam_Whaley_Sailing</Subtitle>
                 <div class="container--grid-two">
                     <div style="background-color: blue"></div>
